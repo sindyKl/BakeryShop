@@ -1,0 +1,27 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="forms">
+        <div class="title">Register</div>
+        <form method="post" class="contact-form d-flex flex-wrap">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" name="submit">Sign up</button>
+        </form>
+        <div style="text-align:center;">
+            <p>or</p>
+            <a href="{% provider_login_url 'google' method = 'oauth2' %}" class="btn-hvr-effects">Login with Google</a>
+            <p>Have an account?</p>
+            <a href="{% url 'login' %}" class="btn-hvr-effects">Sign in</a>
+        </div>
+    </div>
+</div>
+<hr>
+{% endblock %}

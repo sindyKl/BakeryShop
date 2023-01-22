@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/404.css' %}"/>
+    <title>Not found</title>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>
+            The link you clicked may be broken or the <br />
+            page may have been removed.
+        </p>
+        <div>
+            Visit the <a href="{% url 'home' %}">home page</a> or
+            <a href="{% url 'contact' %}">contact</a> us
+        </div>
+        <div class="circle small"></div>
+        <div class="circle medium"></div>
+        <div class="circle big"></div>
+    </div>
+</body>
+</html>

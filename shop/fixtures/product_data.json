@@ -1,0 +1,147 @@
+[
+    {
+     "model": "shop.product",
+     "pk": 1,
+     "fields": {
+      "name": "Sprinkled Donut",
+      "slug": "sprinkled-donut",
+      "category": 1,
+      "price": "3.50",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/donut_pNrcePX.webp"
+     }
+    },
+    {
+     "model": "shop.product",
+     "pk": 2,
+     "fields": {
+      "name": "Black Forest Pastry",
+      "slug": "black-forest-pastry",
+      "category": 2,
+      "price": "12.00",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/cake-item1_QyZlDjg.jpg"
+     }
+    },
+    {
+     "model": "shop.product",
+     "pk": 3,
+     "fields": {
+      "name": "Macarons with Berries",
+      "slug": "macarons-with-berries",
+      "category": 4,
+      "price": "5.50",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/cake-item4_1axTDhX.jpg"
+     }
+    },
+    {
+     "model": "shop.product",
+     "pk": 4,
+     "fields": {
+      "name": "Black Forest Cupcake",
+      "slug": "black-forest-cupcake",
+      "category": 3,
+      "price": "6.00",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/cake-item3_MhDqzxH.jpg"
+     }
+    },
+    {
+     "model": "shop.product",
+     "pk": 5,
+     "fields": {
+      "name": "Strawberry Donut",
+      "slug": "strawberry-donut",
+      "category": 1,
+      "price": "4.50",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/cake-item2_T4xlfzk.jpg"
+     }
+    },
+    {
+     "model": "shop.product",
+     "pk": 6,
+     "fields": {
+      "name": "Hot Chocolate Macarons",
+      "slug": "hot-chocolate-macarons",
+      "category": 4,
+      "price": "8.00",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/chocolate-macarons-baked_UNgGSPD.jpg"
+     }
+    },
+    {
+     "model": "shop.product",
+     "pk": 7,
+     "fields": {
+      "name": "Red Velvet Cake",
+      "slug": "red-velvet-cake",
+      "category": 2,
+      "price": "11.00",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/redvelvet_AC4XCnN.jpg"
+     }
+    },
+    {
+     "model": "shop.product",
+     "pk": 8,
+     "fields": {
+      "name": "Galaxy Cupcake",
+      "slug": "galaxy-cupcake",
+      "category": 3,
+      "price": "8.50",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/Galaxy-Cupcakes-6-1200x1800.jpg_9XyYhyQ.webp"
+    
+     }
+    },
+    {
+     "model": "shop.product",
+     "pk": 9,
+     "fields": {
+      "name": "Red Velvet Donut",
+      "slug": "red-velvet-donut",
+      "category": 1,
+      "price": "4.00",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/img_1394_zwsbbQR.webp"
+     }
+    },
+    {
+     "model": "shop.product",
+     "pk": 10,
+     "fields": {
+      "name": "Rainbow Cupcake",
+      "slug": "rainbow-cupcake",
+      "category": 3,
+      "price": "6.00",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/Rainbow-Cupcakes_DxbgnLG.webp"
+     }
+    },
+    {
+     "model": "shop.product",
+     "pk": 11,
+     "fields": {
+      "name": "Chocolate Cherry Cake",
+      "slug": "chocolate-cherry-cake",
+      "category": 2,
+      "price": "12.00",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/cherry_oAm9XrI.jpg"
+     }
+    },
+    {
+     "model": "shop.product",
+     "pk": 12,
+     "fields": {
+      "name": "Pumpkin Pie Macarons",
+      "slug": "pumpkin-pie-macarons",
+      "category": 4,
+      "price": "5.00",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "products/Pumpkin-Pie-Macarons-9_7B4J45i.webp"
+     }
+    }
+    ]

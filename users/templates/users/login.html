@@ -1,0 +1,21 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="forms">
+        <div class="title">Login</div>
+        <form method="post" class="contact-form d-flex flex-wrap">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" name="submit">Sign in</button>
+        </form>
+        <h5 align="center"><a href="{% url 'password_reset' %}">Forgot password?</a></h5>
+    </div>
+</div>
+<hr>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="text-content bg-Peach p-5" align="center">
+        <h3>Your message has been sent successfully. Thank you!</h3>
+        <h6>Return to the <a href="{% url 'contact' %}">Contact page</a></h6>
+        <img src="{% static 'images/flower-bg.jpg' %}">
+    </div>
+</div>
+<hr>
+{% endblock %}

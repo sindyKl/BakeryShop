@@ -1,0 +1,66 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block body %}
+<div class="site-banner">
+	<div class="banner-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">			
+					<div class="colored">
+						<h1>Shop</h1>
+						<div class="breadcum-items">
+							<span class="item"><a href="{% url 'home' %}">Home /</a></span>
+							<span class="item colored">Shop</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!--site-banner-->
+<section class="our-team bg-sand padding-large" style="text-align: center;">
+
+	<div class="aside">
+		<div class="col">
+			<div class="card bg-Peach" style="width: 18rem;">
+				<div class="card-body">
+					<h4 class="widget-title" align="center">Categories</h4>
+					<ul>
+						<li class="list-group-item justify-content-between align-items-center flex-wrap">
+							<big><a href="{% url 'shop' %}">➢All</a></big>
+						</li>
+						{% for category in categories %}
+						<li class="list-group-item justify-content-between align-items-center flex-wrap">
+							<a href="{% url 'category' category.id %}">➢{{ category }}</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container">
+		<div class="row">
+
+			{% for product in products %}
+			<div class="product-item col-md-3 pb-4">
+				<a href="{% url 'single_product' slug=product.slug %}" class="product-image"><img src="{{ product.image.url }}"/></a>
+				<div class="text-comtent text-center">
+					<h5 class="pt-4"><a href="{% url 'single_product' slug=product.slug %}">{{ product.name }}</a></h5>
+					<p>{{ product.category }}</p>
+					<span class="price colored">${{ product.price }}</span>
+				</div>
+			</div>
+			{% endfor %}
+
+		</div>
+	</div>
+</section>
+{% endblock %}

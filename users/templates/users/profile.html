@@ -1,0 +1,115 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ user.username }}
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}"/>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="text-content bg-Peach p-4">
+        <div class="main-body">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                {% if user.image %}
+                                    <img src="{{ user.image.url }}" alt="Admin" class="rounded-circle bg-primary" width="110">
+                                {%  else %}
+                                    <img src="{% static 'images/cute_kitten.jpg' %}" alt="Admin" class="rounded-circle bg-primary" width="110">
+                                {% endif %}
+                                <div class="mt-3">
+                                    <h4>{{ user.username }}</h4>
+                                    <p class="text-secondary mb-1">{{ user.bio }}</p>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 class="mb-0">Email</h6>
+                                    <span class="text-secondary">{{ user.email }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 class="mb-0">Phone</h6>
+                                    <span class="text-secondary">{{ user.phone }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 class="mb-0">Instagram</h6>
+                                    <span class="text-secondary">{{ user.instagram }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <li class="list-group-item justify-content-between align-items-center flex-wrap">
+                                <h5 class="mb-0" align="center"><a href="{% url 'password_change' %}">➢Change password</a></h1>
+                            </li>
+                            <li class="list-group-item justify-content-between align-items-center flex-wrap">
+                                <h5 class="mb-0" align="center"><a href="{% url 'signout' %}">➢Sign out</a></h1>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h4 class="text-uppercase colored padding-xsmall" align="center">Change Account Info </h4>
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="row mb-3">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Full Name</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form.username }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Bio</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form.bio }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Instagram</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form.instagram }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Profile image</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form.image }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <button type="submit" name="submit">Save Changes</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <h4 class="mb-0" align="center">My orders</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+{% endblock %}

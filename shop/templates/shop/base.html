@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="author" content="">
+	<meta name="keywords" content="">
+    <meta name="description" content="">
+		
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/icomoon/icomoon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/slick-theme.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font.css' %}">
+	{% block head %}{% endblock %}
+	
+</head>
+
+<body>
+
+<div id="main-wrapper" class="overflow-hidden">
+	<div class="header-top-menu bg-black color-secondary">
+		<div class="container">
+			<div class="row">
+				<div class="wrap flex-container padding-small">
+					<div class="contact-block">
+						<span class="pr-50"><i class="icon icon-phone"></i>5555-00-444</span>
+						<span class="color-secondary"><i class="icon icon-envelope-o"></i> bakeryy.shopp@gmail.com</span>
+					</div>
+
+					<div class="header-top-right">
+						<ul class="list-unstyled d-flex color-secondary">
+							{% if request.user.is_authenticated %}
+								<li class="pr-50"><a href="{% url 'profile' %}">My Account</a></li>
+							{% else %}
+								<li class="pr-50"><a href="{% url 'register' %}">Login/Register</a></li>
+							{% endif %}
+							<li class="pr-50"><a href="#">FAQs</a></li>
+							<li><a href="#">Help</a></li>
+						</ul>
+					</div>
+				</div><!--flex-container-->
+			</div>
+		</div>
+	</div><!----top-menu---->
+
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<nav class="navbar navbar-expand-lg col-md-12">
+
+					<div class="navbar-brand">
+						<a href="{% url 'home' %}">
+							<img src="{% static 'images/main-logo.png' %}" alt="logo">
+						</a>
+					</div>
+
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"><i class="icon icon-navicon"></i></span>
+					</button>
+
+					<div class="navbar-collapse collapse" id="slide-navbar-collapse">
+						<ul class="navbar-nav list-inline text-uppercase">
+							<li class="nav-item text-hover {{ home_active }}"><a href="{% url 'home' %}" class="nav-link" data-effect="Home">Home</a></li>
+							<li class="nav-item text-hover {{ shop_active }}"><a href="{% url 'shop' %}" class="nav-link" data-effect="About Us">Shop</a></li>
+							<li class="nav-item text-hover {{ blog_active }}"><a href="{% url 'blog' %}" class="nav-link" data-effect="Blogs">Blog</a></li>
+							<li class="nav-item text-hover {{ contact_active }}"><a href="{% url 'contact' %}" class="nav-link" data-effect="Contact">Contact us</a></li>
+
+							<li class="nav-item dropdown {{ pages_active }}">
+								<a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">Pages</a>
+								<ul class="dropdown-menu">
+									<li><a href="{% url 'about' %}" class="dropdown-item">About us</a></li>
+									<li><a href="{% url 'blog' %}" class="dropdown-item">Blog</a></li>
+									<li><a href="{% url 'post' %}" class="dropdown-item">Single Post</a></li>
+									<li><a href="{% url 'contact' %}" class="dropdown-item">Contact us</a></li>
+									<li><a href="{% url 'shop' %}" class="dropdown-item">Shop</a></li>
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+
+					<div class="action-menu">
+						<div class="searchbar">
+							<a href="#" class="search-button search-toggle" data-selector=".navbar">
+								<i class="icon icon-search"></i>
+							</a>
+							<form role="search" method="get" class="search-box" action="">
+								<input class="search-field text search-input" placeholder="Search" type="search">
+							</form>
+						</div>
+						<div class="shopping-cart">
+							<a href="{% url 'cart' %}">
+								<i class="icon icon-shopping-cart"></i><span style="color: #ce3c83">{{ request.session.cart|length }}</span>
+							</a>
+						</div>
+					</div><!--action-menu-->
+
+				</nav>
+			</div>		
+		</div>
+	</header>
+
+	{% block body %}{% endblock %}
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="wrap flex-container">
+
+					<div class="col-md-3 footer-logo text-center mb-3">
+						<img src="{% static 'images/main-logo.png' %}" class="mb-3">
+					</div>	
+
+					<div class="col-md-5 mr-5 mb-3">
+
+						<div class="widget-newsletter mb-5">
+							<h4 class="widget-title">Subscribe To Our Newletter</h4>
+							<div class="newsletter-button d-flex">
+								<input type="text" name="Subscribe" placeholder="Your Email Address">
+								<button class="btn-hvr-effects">Subscribe</button>
+							</div>
+						</div><!--widget-newsletter-->
+
+						<div class="working-schedule">
+							<h4 class="widget-title">Our Work Time</h4>
+							<div class="time-list d-flex">
+								<ul class="list-unstyled mr-5">
+									<li>Monday - Friday</li>
+									<li>8:00am - 8:30 pm</li>
+								</ul>
+								<ul class="list-unstyled">
+									<li>Saturday - Sunday</li>
+									<li>10:00am - 16:00 pm</li>
+								</ul>
+							</div>
+						</div>
+
+					</div><!--col-md-4-->
+
+					<div class="col-md-2">
+						<div class="quick-links">
+							<h4 class="widget-title">Quick Links</h4>
+							<div class="footer-menu">
+								<ul class="list-unstyled">
+									<li><a href="{% url 'home' %}">Home</a></li>
+									<li><a href="{% url 'about' %}">About us</a></li>
+									<li><a href="{% url 'shop' %}">Shop</a></li>
+									<li><a href="{% url 'blog' %}">Blogs</a></li>
+									<li><a href="{% url 'contact' %}">Contact us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div><!--content-->
+			</div>
+		</div>
+	</footer>
+
+
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="wrap flex-container padding-small">
+				<div class="payment-card">
+					<span>We Accept:</span>
+					<img src="{% static 'images/visa.png' %}" class="cardImg">
+					<img src="{% static 'images/american-express.png' %}" class="cardImg">
+					<img src="{% static 'images/master-card.png' %}" class="cardImg">
+				</div>
+			</div>
+		</div>
+	</div>  	
+
+	<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+</div>
+
+</body>
+</html>

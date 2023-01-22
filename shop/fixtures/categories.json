@@ -1,0 +1,30 @@
+[
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "category": "Donuts"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 2,
+  "fields": {
+    "category": "Cakes"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "category": "Cupcakes"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 4,
+  "fields": {
+    "category": "Macarons"
+  }
+}
+]
